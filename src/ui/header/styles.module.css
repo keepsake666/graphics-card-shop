@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    background-color: var(--colors-interface-darkgrey);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+}
+
+.list__item {
+    display: flex;
+}
