@@ -10,6 +10,7 @@ body {
     --colors-interface-grey: #444444;
     --colors-interface-darkgrey: #EBEBEB;
     --colors-interface-brown: #9AB1BE;
+    --transition-hover: all 100ms ease-out;
 }
 
 #root {
