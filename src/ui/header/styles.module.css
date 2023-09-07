@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    background-color: var(--colors-interface-darkgrey);
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 165px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.list__item {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.list__item:hover {
+    opacity: 0.6;
+    transition: var(--transition-hover);
+    cursor: pointer;
+}
+
+.list__item:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colors-interface-background);
+    transition: var(--transition-hover);
+    cursor: pointer;
+    color: var(--colors-interface-white);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.button--medium {
+    padding: 18px 60px;
+    font-size: 14px;
+}
+
+.button:disabled {
+    background: var(--colors-interface-brown);
+    cursor: no-drop;
+}
+.button:hover {
+    background: var(--colors-interface-brown);
+    transition: var(--transition-hover);
+}
