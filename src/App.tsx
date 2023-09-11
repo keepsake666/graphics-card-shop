@@ -1,12 +1,13 @@
 import "./App.css";
 import { Header } from "./ui/header/header";
-import { Button } from "./ui/botton /botton";
+import { Button } from "./ui/botton/button";
+import { Like } from "./ui/icon/like";
 
 function App() {
   return (
     <div>
       <Header />
-      <Button text="Найтasdasdasdasdи" />
+      <Button text={<Like />} size="icon" />
     </div>
   );
 }

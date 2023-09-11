@@ -1,10 +1,10 @@
 import { IIconProps } from "./utils";
 
-export const Heart = ({ size = "30", ...props }: IIconProps) => (
+export const Like = ({ size = "33", ...props }: IIconProps) => (
   <svg
     width={size}
     height={size}
-    viewBox="0 0 30 30"
+    viewBox="0 0 33 33"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
