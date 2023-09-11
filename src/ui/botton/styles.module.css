@@ -9,17 +9,43 @@
     border: none;
     box-sizing: border-box;
     border-radius: 5px;
+    min-width: 55px;
 }
 
 .button--medium {
-    padding: 18px 60px;
+    padding: 18px;
     font-size: 14px;
+}
+
+.button--small {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.button--large {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.button--extraLarge {
+    padding: 3px;
+    font-size: 10px;
+}
+
+.button--big {
+    padding: 16px;
+    font-size: 20px;
+}
+
+.button--icon {
+    padding: 11px;
 }
 
 .button:disabled {
     background: var(--colors-interface-brown);
     cursor: no-drop;
 }
+
 .button:hover {
     background: var(--colors-interface-brown);
     transition: var(--transition-hover);
