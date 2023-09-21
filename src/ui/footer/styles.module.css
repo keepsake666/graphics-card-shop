@@ -5,5 +5,36 @@
     overflow: hidden;
     padding: 50px 165px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
 }
 
+.container__input {
+    display: flex;
+}
+
+.container__input input {
+    background:var(--colors-interface-white);
+    width: 360px;
+    height: 30px;
+}
+.container__input button {
+    height: 30px;
+}
+
+.list__item {
+    margin-bottom: 5px;
+}
+
+.list__item:first-child {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.list__item:last-child {
+    margin-bottom: 0;
+}
+
+.input {
+    margin-right: 15px;
+}

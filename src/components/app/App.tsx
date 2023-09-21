@@ -24,8 +24,6 @@ function App() {
         textButton="Найти"
         onChange={(e) => setFooterInput(e.target.value)}
         value={footerInput}
-        name="Footer"
-        placeholder="Поиск товара"
       />
     </div>
   );

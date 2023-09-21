@@ -1,7 +1,6 @@
 .catalog {
     display: flex;
     align-items: center;
-    justify-content: center;
     background: var(--colors-interface-background);
     padding: 0 165px;
     max-height: 39px;
@@ -34,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--colors-interface-background);
+    background: none;
     transition: var(--transition-hover);
     cursor: pointer;
     color: var(--colors-interface-white);

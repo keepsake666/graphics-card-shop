@@ -7,41 +7,38 @@ import { Button } from "../botton/button";
 
 export interface IFooterProps {
   value: string;
-  name: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   extClassName?: string;
   textButton?: string;
-  placeholder?: string;
 }
 export const Footer = ({
   value,
-  name,
   onChange,
   extClassName,
   textButton,
-  placeholder,
 }: IFooterProps) => {
   return (
     <footer className={classNames(styles.footer, extClassName)}>
       <Logo />
-      <ul>
-        <li>Покупателям</li>
-        <li>Как выбрать товар</li>
-        <li>Обратная связь</li>
+      <ul className={classNames("list", "m-0", "p-0", styles.list)}>
+        <li className={classNames(styles.list__item)}>Покупателям</li>
+        <li className={classNames(styles.list__item)}>Как выбрать товар</li>
+        <li className={classNames(styles.list__item)}>Обратная связь</li>
       </ul>
-      <ul>
-        <li>Сотрудничество</li>
-        <li>Подключение магазина</li>
-        <li>Подключение магазина</li>
+      <ul className={classNames("list", "m-0", "p-0")}>
+        <li className={classNames(styles.list__item)}>Сотрудничество</li>
+        <li className={classNames(styles.list__item)}>Подключение магазина</li>
+        <li className={classNames(styles.list__item)}>Подключение магазина</li>
       </ul>
-      <div>
+      <div className={classNames(styles.container__input)}>
         <Input
           value={value}
-          name={name}
           onChange={onChange}
-          placeholder={placeholder}
+          name="Footer"
+          placeholder="Поиск товара"
+          extClassName={styles.input}
         />
-        <Button text={textButton} />
+        <Button text={textButton} size="small" />
       </div>
     </footer>
   );
