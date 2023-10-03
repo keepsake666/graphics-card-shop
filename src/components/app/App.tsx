@@ -6,8 +6,8 @@ import { Input } from "../../ui/input/input";
 import { Catalog } from "../../ui/catalog/catalog";
 import { Footer } from "../../ui/footer/footer";
 import { Menu } from "../../ui/menu/menu";
-import { Categories } from "../../ui/categories/categories";
 import styles from "./styles.module.css";
+import { ContainerCategories } from "../../ui/container-categories/container-categories";
 
 function App() {
   const [value, setValue] = useState("");
@@ -18,6 +18,51 @@ function App() {
     { id: 3, name: "Товар 3" },
     { id: 4, name: "Товар 4" },
     { id: 5, name: "Товар 5" },
+  ];
+
+  const product = [
+    {
+      id: 1,
+      name: "Product 1",
+      categories: [
+        { id: 1, name: "Category 1" },
+        { id: 2, name: "Category 2" },
+      ],
+    },
+    {
+      id: 2,
+      name: "Product 2",
+      categories: [
+        { id: 3, name: "Category 3" },
+        { id: 4, name: "Category 4" },
+      ],
+    },
+    {
+      id: 3,
+      name: "Product 3",
+      categories: [
+        { id: 1, name: "Category 1" },
+        { id: 5, name: "Category 5" },
+      ],
+    },
+    {
+      id: 4,
+      name: "Product 4",
+      categories: [
+        { id: 2, name: "Category 2" },
+        { id: 4, name: "Category 4" },
+        { id: 6, name: "Category 6" },
+      ],
+    },
+    {
+      id: 5,
+      name: "Product 5",
+      categories: [
+        { id: 3, name: "Category 3" },
+        { id: 5, name: "Category 5" },
+        { id: 7, name: "Category 7" },
+      ],
+    },
   ];
   return (
     <div>
@@ -32,11 +77,7 @@ function App() {
       <Catalog />
       <div className={styles.container}>
         <Menu categoriest={items} />
-        <Categories
-          name="Ноутбуки
-и аксессуары"
-          categoriest={items}
-        />
+        <ContainerCategories categories={product} />
       </div>
       <Footer
         textButton="Найти"
