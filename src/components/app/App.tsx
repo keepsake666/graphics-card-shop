@@ -6,6 +6,8 @@ import { Input } from "../../ui/input/input";
 import { Catalog } from "../../ui/catalog/catalog";
 import { Footer } from "../../ui/footer/footer";
 import { Menu } from "../../ui/menu/menu";
+import { Categories } from "../../ui/categories/categories";
+import styles from "./styles.module.css";
 
 function App() {
   const [value, setValue] = useState("");
@@ -28,7 +30,14 @@ function App() {
         placeholder="Поиск товара"
       />
       <Catalog />
-      <Menu categoriest={items} />
+      <div className={styles.container}>
+        <Menu categoriest={items} />
+        <Categories
+          name="Ноутбуки
+и аксессуары"
+          categoriest={items}
+        />
+      </div>
       <Footer
         textButton="Найти"
         onChange={(e) => setFooterInput(e.target.value)}

@@ -8,10 +8,11 @@ interface ICategoriest {
 
 interface IMenuProps {
   categoriest: ICategoriest[];
+  extClassName?: string;
 }
-export const Menu = ({ categoriest }: IMenuProps) => {
+export const Menu = ({ categoriest, extClassName }: IMenuProps) => {
   return (
-    <div className={classNames(styles.container)}>
+    <div className={classNames(styles.container, extClassName)}>
       <div className={styles.categories}>
         <ul className={classNames("list", "m-0", "p-0", styles.list)}>
           {categoriest.map((item) => (
