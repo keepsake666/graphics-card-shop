@@ -13,7 +13,7 @@ export const Categories = ({
   name,
 }: ICategoriesProps) => {
   return (
-    <div className={classNames(styles.container, extClassName)}>
+    <li className={classNames(styles.container, extClassName)}>
       <h3 className={styles.name}> {name}</h3>
       <ul className={classNames("list", "m-0", "p-0", styles.list)}>
         {categories.map((item) => (
@@ -22,6 +22,6 @@ export const Categories = ({
           </li>
         ))}
       </ul>
-    </div>
+    </li>
   );
 };

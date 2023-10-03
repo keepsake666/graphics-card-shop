@@ -25,7 +25,7 @@ function App() {
       id: 1,
       name: "Product 1",
       categories: [
-        { id: 1, name: "Category 1" },
+        { id: 1, name: "Ноутбуки-трансформеры" },
         { id: 2, name: "Category 2" },
       ],
     },

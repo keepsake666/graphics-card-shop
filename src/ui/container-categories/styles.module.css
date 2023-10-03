@@ -1,6 +1,7 @@
 .container {
-    display: flex;
-    max-width: 900px;
-    padding-right: 165px;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    padding: 35px 165px 0 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 65px;
 }

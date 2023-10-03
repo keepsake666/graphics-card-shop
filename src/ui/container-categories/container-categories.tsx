@@ -27,9 +27,11 @@ export const ContainerCategories = ({
       )}
     >
       {categories.map((item) => (
-        <li key={item.id}>
-          <Categories categories={item.categories} name={item.name} />
-        </li>
+        <Categories
+          key={item.id}
+          categories={item.categories}
+          name={item.name}
+        />
       ))}
     </ul>
   );
