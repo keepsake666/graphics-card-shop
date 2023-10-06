@@ -8,6 +8,7 @@ import { Footer } from "../../ui/footer/footer";
 import { Menu } from "../../ui/menu/menu";
 import styles from "./styles.module.css";
 import { ContainerCategories } from "../../ui/container-categories/container-categories";
+import { Characteristics } from "../../ui/characteristics/characteristics";
 
 function App() {
   const [value, setValue] = useState("");
@@ -75,6 +76,7 @@ function App() {
         placeholder="Поиск товара"
       />
       <Catalog />
+      <Characteristics />
       <div className={styles.container}>
         <Menu categoriest={items} />
         <ContainerCategories categories={product} />

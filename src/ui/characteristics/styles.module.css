@@ -1,0 +1,21 @@
+.list {
+    background-color: var(--colors-interface-background);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding-left: 155px;
+    box-sizing: border-box;
+    max-width: 921px;
+}
+
+.item {
+    text-align: center;
+    width: 155px;
+    color: var(--colors-interface-white);
+}
+
+.svg {
+    margin-right: 22px;
+    cursor: pointer;
+}
