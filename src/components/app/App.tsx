@@ -9,6 +9,7 @@ import { Menu } from "../../ui/menu/menu";
 import styles from "./styles.module.css";
 import { ContainerCategories } from "../../ui/container-categories/container-categories";
 import { Characteristics } from "../../ui/characteristics/characteristics";
+import { Product } from "../product/product";
 
 function App() {
   const [value, setValue] = useState("");
@@ -77,6 +78,7 @@ function App() {
       />
       <Catalog />
       <Characteristics />
+      <Product />
       <div className={styles.container}>
         <Menu categoriest={items} />
         <ContainerCategories categories={product} />

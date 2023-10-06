@@ -8,7 +8,7 @@ export const Characteristics = () => {
       <li className={styles.item}>Company</li>
       <li className={styles.item}>Model</li>
       <li className={styles.item}>Memory</li>
-      <li className={styles.item}>
+      <li className={classNames(styles.item, styles.price)}>
         <Fillter className={styles.svg} /> Price{" "}
       </li>
     </ul>
