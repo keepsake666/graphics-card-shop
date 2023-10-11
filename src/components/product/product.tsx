@@ -25,15 +25,23 @@ export const Product = () => {
           <p className={styles.text}>price</p>
         </div>
         {isMenuOpen && (
-          <ul className={classNames("list", "m-0", "p-0", styles.list)}>
-            <li className={styles.item}>Магазин</li>
-            <li className={styles.item}>Название</li>
-            <li className={styles.item}>146 999 ₽</li>
-            <li className={styles.item}>button</li>
-          </ul>
+          <>
+            <ul className={classNames("list", "m-0", "p-0", styles.list)}>
+              <li className={styles.item}>Магазин</li>
+              <li className={styles.item}>Название</li>
+              <li className={styles.item}>146 999 ₽</li>
+              <li className={styles.item}>button</li>
+            </ul>
+            <ul className={classNames("list", "m-0", "p-0", styles.list)}>
+              <li className={styles.item}>Магазин</li>
+              <li className={styles.item}>Название</li>
+              <li className={styles.item}>146 999 ₽</li>
+              <li className={styles.item}>button</li>
+            </ul>
+          </>
         )}
       </div>
-      <div>
+      <div className={styles.containerButton}>
         {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
         <button
           className={isMenuOpen ? styles.buttonActive : styles.button}

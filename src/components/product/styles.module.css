@@ -1,5 +1,6 @@
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
     align-items: center;
     max-width: 921px;
@@ -31,8 +32,8 @@
 .buttonActive {
     background-color: var(--colors-interface-background);
     width: 25px;
-    height: auto;
-    border-radius: 0 0 0 10px;
+    height: 100%;
+    border-radius: 0 0 10px 0;
     border: none;
     cursor: pointer;
     background-image: url("../../assets/img/vector.svg"),
@@ -54,18 +55,25 @@
 }
 
 .list {
+    box-sizing: border-box;
     max-width: 896px;
     display: flex;
     align-items: center;
     height: 43px;
     border: 1px solid var(--colors-interface-background);
+    border-bottom: none;
 }
 
 .list:last-child {
     border-radius: 0 0 0 10px;
+    border-bottom: 1px solid var(--colors-interface-background);
 }
 
 .item {
     width: 231px;
     text-align: center;
+}
+
+.containerButton {
+    height: 100%;
 }
