@@ -1,4 +1,71 @@
 .container {
     display: flex;
+    height: 100%;
+    align-items: center;
+    max-width: 921px;
+}
+.img {
+    width: 155px;
     height: 75px;
+    object-fit: contain;
+}
+.text {
+    width: 155px;
+    text-align: center;
+}
+
+.button {
+    background-color: var(--colors-interface-darkgrey);
+    width: 25px;
+    height: 75px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    cursor: pointer;
+    background-image: url("../../assets/img/vector.svg"),
+    url("../../assets/img/vector.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 18px center, bottom 25px center;
+    transition: var(--transition-hover);
+}
+
+.buttonActive {
+    background-color: var(--colors-interface-background);
+    width: 25px;
+    height: auto;
+    border-radius: 0 0 0 10px;
+    border: none;
+    cursor: pointer;
+    background-image: url("../../assets/img/vector.svg"),
+    url("../../assets/img/vector.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 18px center, bottom 25px center;
+}
+
+.button:hover {
+    opacity: 0.6;
+    transition: var(--transition-hover);
+}
+
+.textContainer {
+    max-width: 896px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    max-width: 896px;
+    display: flex;
+    align-items: center;
+    height: 43px;
+    border: 1px solid var(--colors-interface-background);
+}
+
+.list:last-child {
+    border-radius: 0 0 0 10px;
+}
+
+.item {
+    width: 231px;
+    text-align: center;
 }
