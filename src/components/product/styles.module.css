@@ -11,7 +11,7 @@
     object-fit: contain;
 }
 .text {
-    width: 155px;
+   width: 155px;
     text-align: center;
 }
 
@@ -36,10 +36,10 @@
     border-radius: 0 0 10px 0;
     border: none;
     cursor: pointer;
-    background-image: url("../../assets/img/vector.svg"),
-    url("../../assets/img/vector.svg");
+    background-image: url("../../assets/img/vectorWhite.svg"),
+    url("../../assets/img/vectorWhite.svg");
     background-repeat: no-repeat;
-    background-position: bottom 18px center, bottom 25px center;
+    background-position: bottom 50px center, bottom 57px center;
 }
 
 .button:hover {
@@ -52,26 +52,6 @@
     height: 75px;
     display: flex;
     align-items: center;
-}
-
-.list {
-    box-sizing: border-box;
-    max-width: 896px;
-    display: flex;
-    align-items: center;
-    height: 43px;
-    border: 1px solid var(--colors-interface-background);
-    border-bottom: none;
-}
-
-.list:last-child {
-    border-radius: 0 0 0 10px;
-    border-bottom: 1px solid var(--colors-interface-background);
-}
-
-.item {
-    width: 231px;
-    text-align: center;
 }
 
 .containerButton {

@@ -1,0 +1,24 @@
+.list {
+    box-sizing: border-box;
+    max-width: 896px;
+    display: flex;
+    align-items: center;
+    height: 43px;
+    border: 1px solid var(--colors-interface-background);
+    border-bottom: none;
+}
+
+.list:last-child {
+    border-radius: 0 0 0 10px;
+    border-bottom: 1px solid var(--colors-interface-background);
+}
+
+.item {
+    width: 231px;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    text-decoration:none;
+}

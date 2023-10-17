@@ -1,43 +1,52 @@
-import { useState } from "react";
-import classNames from "classnames";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
+import { CatalogShop, IShop } from "../../ui/catalog-shop/catalog-shop";
 
-export const Product = () => {
+interface IProduct {
+  id: number;
+  img: string;
+  company: string;
+  name: string;
+  memory: string;
+  price: string | number;
+  shop: IShop[];
+}
+export const Product = ({
+  id,
+  img,
+  company,
+  name,
+  memory,
+  price,
+  shop,
+}: IProduct) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const handleClick = () => {
     setMenuOpen(!isMenuOpen);
   };
   return (
-    <div className={styles.container}>
+    <div key={id} className={styles.container}>
       <div>
         <div className={styles.textContainer}>
-          <img
-            className={styles.img}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckDABz4NqMRvOKyWodzRhwtUM6f78SlFjqKFFmnfNvw&s"
-            alt=""
-          />
-          <p className={styles.text}>asus</p>
-          <p className={styles.text}>
-            ROG-STRIX-GeForce-RTX- 3090-GUNDAM-EDITION
-          </p>
-          <p className={styles.text}>19.5 Gbps</p>
-          <p className={styles.text}>1890 MHz</p>
-          <p className={styles.text}>price</p>
+          <img className={styles.img} src={img} alt="" />
+          <p className={styles.text}>{company}</p>
+          <p className={styles.text}>{name}</p>
+          <p className={styles.text}>{memory}</p>
+          <p className={styles.text}>{price}</p>
+          <p className={styles.text}>{price}</p>
         </div>
         {isMenuOpen && (
           <>
-            <ul className={classNames("list", "m-0", "p-0", styles.list)}>
-              <li className={styles.item}>Магазин</li>
-              <li className={styles.item}>Название</li>
-              <li className={styles.item}>146 999 ₽</li>
-              <li className={styles.item}>button</li>
-            </ul>
-            <ul className={classNames("list", "m-0", "p-0", styles.list)}>
-              <li className={styles.item}>Магазин</li>
-              <li className={styles.item}>Название</li>
-              <li className={styles.item}>146 999 ₽</li>
-              <li className={styles.item}>button</li>
-            </ul>
+            {shop.map((item) => (
+              <CatalogShop
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                model={item.model}
+                price={item.price}
+                link={item.link}
+              />
+            ))}
           </>
         )}
       </div>
