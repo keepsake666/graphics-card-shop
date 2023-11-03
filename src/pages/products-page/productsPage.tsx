@@ -5,8 +5,18 @@ import { Button } from "../../ui/botton/button";
 import { Catalog } from "../../ui/catalog/catalog";
 import { Product } from "../../components/product/product";
 import { Characteristics } from "../../ui/characteristics/characteristics";
+import Popup from "../../components/popup/popup";
 
 export const ProductsPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenPopup = () => {
+    setIsOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsOpen(false);
+  };
   const fakeProducts = [
     {
       id: 1,
@@ -61,6 +71,10 @@ export const ProductsPage = () => {
   return (
     <>
       <Catalog />
+      <Popup isOpen={isOpen} onClose={handleClosePopup}>
+        <h1>Hello, Popup!</h1>
+        <p>This is the content of the popup.</p>
+      </Popup>
       <div className={styles.containerInput}>
         <Input
           extClassName={styles.input}
@@ -75,6 +89,7 @@ export const ProductsPage = () => {
         <Characteristics />
         {fakeProducts.map((item) => (
           <Product
+            onClick={handleOpenPopup}
             key={item.id}
             id={item.id}
             img={item.img}

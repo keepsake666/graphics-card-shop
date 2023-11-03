@@ -10,6 +10,7 @@ interface IProduct {
   memory: string;
   price: string | number;
   shop: IShop[];
+  onClick: () => void;
 }
 export const Product = ({
   id,
@@ -19,6 +20,7 @@ export const Product = ({
   memory,
   price,
   shop,
+  onClick,
 }: IProduct) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const handleClick = () => {
@@ -28,7 +30,8 @@ export const Product = ({
     <div key={id} className={styles.container}>
       <div>
         <div className={styles.textContainer}>
-          <img className={styles.img} src={img} alt="" />
+          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+          <img onClick={onClick} className={styles.img} src={img} alt="" />
           <p className={styles.text}>{company}</p>
           <p className={styles.text}>{name}</p>
           <p className={styles.text}>{memory}</p>
